@@ -1,0 +1,10 @@
+{
+  "name": "rindus-task",
+  "version": "1.0.0",
+  "description": "The technical task for Rindus (express rest api)",
+  "main": "app.ts",
+  "repository": "https://github.com/RomSribn/rindus-task",
+  "author": "RomSribn <steeper.fest@gmail.com>",
+  "license": "MIT",
+  "private": true
+}
