@@ -1,0 +1,25 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "target": "es2022",
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "noImplicitAny": false,
+    "moduleResolution": "node",
+    "sourceMap": true,
+    "outDir": "./dist/dev",
+    "baseUrl": ".",
+    "paths": {
+      "*": ["./node_modules/*"],
+      "@config/*": ["src/config/*"],
+      "@api/*": ["src/api/*"],
+      "@middlewares/*": ["src/middlewares/*"],
+      "@utils/*": ["src/utils/*"],
+      "@interfaces/*": ["src/interfaces/*"],
+    }
+  },
+  "include": ["./src/**/*"],
+  "exluce": ["node_modules"]
+}
