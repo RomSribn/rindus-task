@@ -10,5 +10,27 @@
         }
       }
     ]
+  ],
+  "plugins": [
+    [
+      "module-resolver",
+      {
+        "extensions": [
+          ".js",
+          "jsx",
+          "ts",
+          "tsx",
+          ".json"
+        ],
+        "alias": {
+          "src": "./src",
+          "@config/*": "src/config",
+          "@api/*": "src/api",
+          "@middlewares/*": "src/middlewares",
+          "@utils/*": "src/utils",
+          "@interfaces/*": "src/interfaces"
+        }
+      }
+    ]
   ]
 }

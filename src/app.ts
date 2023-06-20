@@ -1,11 +1,13 @@
-import * as error from './middlewares/error.mw';
+import 'module-alias/register';
+
+import * as error from '@middlewares/error.mw';
 import cors from 'cors';
 import morgan from 'morgan';
 import express from 'express';
-import DBConnection from './config/db';
+import DBConnection from '@config/db';
 import fileUpload from 'express-fileupload';
 import { createServer } from 'http';
-import { appConfig } from './config/env';
+import { appConfig } from '@config/env';
 
 const { port } = appConfig;
 const app = express();

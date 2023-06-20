@@ -1,6 +1,6 @@
 import { DataTypes } from 'sequelize';
-import { City } from '../../cities/models/City.model';
-import { Condition } from '../../weather/models/Condition.model';
+import { City } from '@api/cities/models/City.model';
+import { Condition } from '@api/weather/models/Condition.model';
 import {
   Table,
   Unique,

@@ -13,6 +13,9 @@
     "import/parsers": {
       "@typescript-eslint/parser": [".ts", ".tsx"]
     },
+    "ts-node": {
+        "require": ["tsconfig-paths/register"]
+    },
     "import/resolver": {
       "typescript": {
         "alwaysTryTypes": true
