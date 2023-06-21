@@ -5,6 +5,7 @@ import { City } from '@api/cities/models/City.model';
 import { Weather } from '@api/weather/models/Weather.model';
 import { Condition } from '@api/weather/models/Condition.model';
 import { IServiceResponse } from '@interfaces/common.interfaces';
+import { WEATHER_PATH, JSON_EXTENSION } from '@utils/common.utils';
 
 type IProps = {
   transaction?: Transaction;
@@ -23,11 +24,11 @@ export const createInitialWeatherservice = async ({
   transaction,
 }: IProps): Promise<IServiceResponse<any>> => {
   try {
-    const WEATHER = require('@api/_init/data/weather.json');
+    const WEATHER = require(WEATHER_PATH);
 
-    const fileExtension = path.extname('@api/_init/data/weather.json');
+    const fileExtension = path.extname(WEATHER_PATH);
 
-    if (fileExtension !== '.json') {
+    if (fileExtension !== JSON_EXTENSION) {
       throw new Error('Unsupported file extension');
     }
 

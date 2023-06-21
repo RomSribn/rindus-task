@@ -3,6 +3,7 @@ import httpStatus from 'http-status';
 import { Transaction } from 'sequelize';
 import { Condition } from '@api/weather/models/Condition.model';
 import { IServiceResponse } from '@interfaces/common.interfaces';
+import { CONDITIONS_PATH, JSON_EXTENSION } from '@utils/common.utils';
 
 type IProps = {
   transaction?: Transaction;
@@ -14,10 +15,10 @@ export interface IResult {
 
 export const createInitialConditions = async ({ transaction }: IProps): Promise<IServiceResponse<IResult>> => {
   try {
-    const CITIES = require('@api/_init/data/conditions.json');
-    const fileExtension = path.extname('@api/_init/data/conditions.json');
+    const CITIES = require(CONDITIONS_PATH);
+    const fileExtension = path.extname(CONDITIONS_PATH);
 
-    if (fileExtension !== '.json') {
+    if (fileExtension !== JSON_EXTENSION) {
       throw new Error('Unsupported file extension');
     }
 

@@ -1,12 +1,3 @@
-export interface RandomCodeType {
-  length: number;
-  numbers?: boolean;
-  symbols?: boolean;
-  lowercase?: boolean;
-  uppercase?: boolean;
-  excludeSimilarCharacters?: boolean;
-}
-
 export interface IServiceError {
   status: number;
   message: string;

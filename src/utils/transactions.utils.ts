@@ -9,16 +9,3 @@ export const executeTransaction = (callback: (t: Transaction) => PromiseLike<unk
     t => callback(t),
   );
 };
-
-export const executeTransactionPromise = () => {
-  return new Promise(resolve => {
-    return mainDBConnection.transaction(
-      {
-        isolationLevel: Transaction.ISOLATION_LEVELS.READ_COMMITTED,
-      },
-      async t => {
-        resolve(t);
-      },
-    );
-  });
-};
