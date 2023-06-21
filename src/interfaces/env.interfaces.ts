@@ -1,6 +1,7 @@
 export interface IAppConfig {
   nodeEnv: 'development' | 'production';
   port: number;
+  accessKey: string;
 }
 
 export interface IDbConfig {

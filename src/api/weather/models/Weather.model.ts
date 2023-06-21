@@ -11,9 +11,7 @@ import {
   AllowNull,
   Model,
   ForeignKey,
-  BelongsTo,
-  HasMany,
-  Index
+  BelongsTo
 } from 'sequelize-typescript';
 
 @Table({
@@ -26,7 +24,7 @@ class Weather extends Model<Weather> {
   @Unique
   @Default(DataTypes.UUIDV4)
   @Column
-  wheather_id: string;
+  id: string;
 
   @AllowNull(true)
   @Column
@@ -34,18 +32,8 @@ class Weather extends Model<Weather> {
 
   @AllowNull(false)
   @Column
-  currentWheather: string;
-
-  @AllowNull(false)
-  @Column
   temperature: number;
 
-  @Index({
-    name: 'Weather_city_idx',
-    unique: false,
-    using: 'BTREE',
-    order: 'ASC',
-  })
   @ForeignKey(() => City)
   @AllowNull(false)
   @Column
@@ -53,8 +41,12 @@ class Weather extends Model<Weather> {
   @BelongsTo(() => City)
   city?: City;
 
-  @HasMany(() => Condition)
-  condition: Condition[];
+  @ForeignKey(() => Condition)
+  @AllowNull(false)
+  @Column
+  conditionId: number;
+  @BelongsTo(() => Condition)
+  condition?: Condition;
 }
 
 export { Weather };

@@ -1,4 +1,5 @@
-import { Table, Unique, Column, PrimaryKey, AllowNull, Model } from 'sequelize-typescript';
+import { Weather } from '@api/weather/models/Weather.model';
+import { Table, Unique, Column, PrimaryKey, AllowNull, Model, AutoIncrement, HasMany } from 'sequelize-typescript';
 
 @Table({
   tableName: 'City',
@@ -7,12 +8,16 @@ import { Table, Unique, Column, PrimaryKey, AllowNull, Model } from 'sequelize-t
 class City extends Model<City> {
   @PrimaryKey
   @Unique
+  @AutoIncrement
   @Column
-  city_id: number;
+  id: number;
 
   @AllowNull(false)
   @Column
   name: string;
+
+  @HasMany(() => Weather)
+  condition: Weather[];
 }
 
 export { City };

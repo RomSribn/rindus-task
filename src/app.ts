@@ -5,6 +5,7 @@ import cors from 'cors';
 import morgan from 'morgan';
 import express from 'express';
 import DBConnection from '@config/db';
+import _initRouter from './api/_init/route';
 import fileUpload from 'express-fileupload';
 import { createServer } from 'http';
 import { appConfig } from '@config/env';
@@ -40,6 +41,9 @@ DBConnection.sync();
 
 // Http server and Sockets
 const http = createServer(app);
+
+// Routes
+app.use('/_init', _initRouter);
 
 // Errors
 app.use(error.notFound);

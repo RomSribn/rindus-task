@@ -1,0 +1,146 @@
+[
+  {
+    "date": "2023-06-21",
+    "temperature": 30,
+    "city": "Madrid",
+    "condition": [
+      {
+        "name": "Sunny"
+      }
+    ]
+  },
+  {
+    "date": "2023-06-22",
+    "temperature": 28,
+    "city": "Madrid",
+    "condition": [
+      {
+        "name": "Clouds"
+      }
+    ]
+  },
+  {
+    "date": "2023-06-23",
+    "temperature": 32,
+    "city": "Madrid",
+    "condition": [
+      {
+        "name": "Sunny"
+      }
+    ]
+  },
+  {
+    "date": "2023-06-24",
+    "temperature": 31,
+    "city": "Madrid",
+    "condition": [
+      {
+        "name": "Sunny"
+      }
+    ]
+  },
+  {
+    "date": "2023-06-21",
+    "temperature": 25,
+    "city": "Toronto",
+    "condition": [
+      {
+        "name": "Fog"
+      },
+      {
+        "name": "Clouds"
+      }
+    ]
+  },
+  {
+    "date": "2023-06-22",
+    "temperature": 28,
+    "city": "Toronto",
+    "condition": [
+      {
+        "name": "Sunny"
+      }
+    ]
+  },
+  {
+    "date": "2023-06-23",
+    "temperature": 24,
+    "city": "Toronto",
+    "condition": [
+      {
+        "name": "Thunder and lightning"
+      },
+      {
+        "name": "Rain"
+      },
+      {
+        "name": "Clouds"
+      }
+    ]
+  },
+  {
+    "date": "2023-06-24",
+    "temperature": 25,
+    "city": "Toronto",
+    "condition": [
+      {
+        "name": "Rain"
+      },
+      {
+        "name": "Clouds"
+      }
+    ]
+  },
+  {
+    "date": "2023-06-21",
+    "temperature": 28,
+    "city": "Warsaw",
+    "condition": [
+      {
+        "name": "Clouds"
+      }
+    ]
+  },
+  {
+    "date": "2023-06-22",
+    "temperature": 25,
+    "city": "Warsaw",
+    "condition": [
+      {
+        "name": "Fog"
+      },
+      {
+        "name": "Clouds"
+      }
+    ]
+  },
+  {
+    "date": "2023-06-23",
+    "temperature": 24,
+    "city": "Warsaw",
+    "condition": [
+      {
+        "name": "Rain"
+      },
+      {
+        "name": "Clouds"
+      }
+    ]
+  },
+  {
+    "date": "2023-06-24",
+    "temperature": 23,
+    "city": "Warsaw",
+    "condition": [
+      {
+        "name": "Rain"
+      },
+      {
+        "name": "Clouds"
+      },
+      {
+        "name": "Thunder and lightning"
+      }
+    ]
+  }
+]

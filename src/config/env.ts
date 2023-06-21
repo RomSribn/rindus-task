@@ -17,6 +17,12 @@ export const appConfig: IAppConfig = config({
     required: false,
     default: 3000,
   },
+  accessKey: {
+    env: 'ACCESS_KEY',
+    type: 'string',
+    required: false,
+    default: 'ACCESS_KEY REQUIRED FOR INITIALIZE APP',
+  },
 });
 
 export const dbConfig: IDbConfig = config({

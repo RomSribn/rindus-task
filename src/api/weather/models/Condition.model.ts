@@ -1,6 +1,5 @@
-import { DataTypes } from 'sequelize';
 import { Weather } from './Weather.model';
-import { Table, Unique, Column, PrimaryKey, AllowNull, Model, ForeignKey, BelongsTo } from 'sequelize-typescript';
+import { Table, Unique, Column, PrimaryKey, AllowNull, Model, HasMany, AutoIncrement } from 'sequelize-typescript';
 
 @Table({
   tableName: 'Condition',
@@ -9,19 +8,16 @@ import { Table, Unique, Column, PrimaryKey, AllowNull, Model, ForeignKey, Belong
 class Condition extends Model<Condition> {
   @PrimaryKey
   @Unique
+  @AutoIncrement
   @Column
-  condition_id: number;
+  id: number;
 
   @AllowNull(false)
   @Column
   name: string;
 
-  @ForeignKey(() => Weather)
-  @AllowNull(false)
-  @Column(DataTypes.UUID)
-  weatherId: string;
-  @BelongsTo(() => Weather)
-  weather?: Weather;
+  @HasMany(() => Weather)
+  condition: Weather[];
 }
 
 export { Condition };
