@@ -1,14 +1,15 @@
 import 'module-alias/register';
-
 import * as error from '@middlewares/error.mw';
 import cors from 'cors';
 import morgan from 'morgan';
 import express from 'express';
 import DBConnection from '@config/db';
-import _initRouter from './api/_init/route';
+import _initRouter from '@api/_init/route';
 import fileUpload from 'express-fileupload';
+import citiesRouter from '@api/cities/routes/cities.route';
 import { createServer } from 'http';
 import { appConfig } from '@config/env';
+import { INIT, CITIES, CONDITIONS, WEATHER } from '@utils/routes.utils';
 
 const { port } = appConfig;
 const app = express();
@@ -43,7 +44,8 @@ DBConnection.sync();
 const http = createServer(app);
 
 // Routes
-app.use('/_init', _initRouter);
+app.use(INIT, _initRouter);
+app.use(CITIES, citiesRouter);
 
 // Errors
 app.use(error.notFound);
