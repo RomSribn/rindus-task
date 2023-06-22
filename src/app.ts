@@ -7,6 +7,8 @@ import DBConnection from '@config/db';
 import _initRouter from '@api/_init/route';
 import fileUpload from 'express-fileupload';
 import citiesRouter from '@api/cities/routes/cities.route';
+import weatherRouter from '@api/weather/routes/weather.route';
+import conditionsRouter from '@api/weather/routes/conditions.route';
 import { createServer } from 'http';
 import { appConfig } from '@config/env';
 import { INIT, CITIES, CONDITIONS, WEATHER } from '@utils/routes.utils';
@@ -46,6 +48,8 @@ const http = createServer(app);
 // Routes
 app.use(INIT, _initRouter);
 app.use(CITIES, citiesRouter);
+app.use(CONDITIONS, conditionsRouter);
+app.use(WEATHER, weatherRouter);
 
 // Errors
 app.use(error.notFound);

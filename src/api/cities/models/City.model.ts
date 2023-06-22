@@ -17,7 +17,7 @@ class City extends Model<City> {
   name: string;
 
   @HasMany(() => Weather)
-  condition: Weather[];
+  weather: Weather[];
 }
 
 export { City };
