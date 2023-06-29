@@ -1,7 +1,7 @@
 import httpStatus from 'http-status';
 import { appConfig } from '@config/env';
-import { Request, Response } from 'express';
 import { APIError } from '@utils/api.utils';
+import { Request, Response } from 'express';
 import { executeTransaction } from '@utils/transactions.utils';
 import { createInitialCities } from './services/createInitialCities.service';
 import { createInitialWeatherservice } from './services/createInitialWeatherservice';

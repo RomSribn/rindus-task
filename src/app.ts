@@ -9,12 +9,9 @@ import fileUpload from 'express-fileupload';
 import citiesRouter from '@api/cities/routes/cities.route';
 import weatherRouter from '@api/weather/routes/weather.route';
 import conditionsRouter from '@api/weather/routes/conditions.route';
-import { createServer } from 'http';
-import { appConfig } from '@config/env';
 import { INIT, CITIES, CONDITIONS, WEATHER } from '@utils/routes.utils';
 
-const { port } = appConfig;
-const app = express();
+export const app = express();
 
 // Cors settings
 app.use(
@@ -42,9 +39,6 @@ DBConnection.authenticate()
   .catch(err => console.error(`Unable to connect to the database: ${err}`));
 DBConnection.sync();
 
-// Http server and Sockets
-const http = createServer(app);
-
 // Routes
 app.use(INIT, _initRouter);
 app.use(CITIES, citiesRouter);
@@ -54,5 +48,4 @@ app.use(WEATHER, weatherRouter);
 // Errors
 app.use(error.notFound);
 
-// Run server
-http.listen(port, () => console.log(`Server started on port ${port}`));
+module.exports = app;

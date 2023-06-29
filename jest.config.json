@@ -1,0 +1,17 @@
+{
+  "testEnvironment": "node",
+  "extensionsToTreatAsEsm": [".ts", ".utils.ts"],
+  "roots": ["<rootDir>/src/"],
+  "preset": "ts-jest",
+  "transform": {
+    "^.+\\.(ts|tsx)$": "ts-jest"
+  },
+  "moduleNameMapper": {
+    "@root/(.*)": "<rootDir>/src/$1",
+    "@config/(.*)": "<rootDir>/src/config/$1",
+    "@api/(.*)": "<rootDir>/src/api/$1",
+    "@middlewares/(.*)": "<rootDir>/src/middlewares/$1",
+    "@utils/(.*)": "<rootDir>/src/utils/$1",
+    "@interfaces/(.*)": "<rootDir>/src/interfaces/$1"
+  }
+}
