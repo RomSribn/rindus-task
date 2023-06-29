@@ -23,6 +23,7 @@
       "babel-module": {
         "alias": {
         "*": ["./node_modules/*"],
+        "@root/*": ["./src/*"],
         "@config/*": ["./src/config/*"],
         "@api/*": ["./src/api/*"],
         "@middlewares/*": ["./src/middlewares/*"],

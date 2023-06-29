@@ -1,15 +1,7 @@
 {
   "presets": [
-    "@babel/typescript",
-    [
-      "@babel/preset-env",
-      {
-        "modules": false,
-        "targets": {
-          "node": "current"
-        }
-      }
-    ]
+    "@babel/preset-typescript",
+    ["@babel/preset-env", { "targets": { "node": "current" } }]
   ],
   "plugins": [
     [
@@ -17,17 +9,17 @@
       {
         "extensions": [
           ".js",
-          "jsx",
-          "ts",
-          "tsx",
+          ".jsx",
+          ".ts",
+          ".tsx",
           ".json"
         ],
         "alias": {
-          "src": "./src",
+          "@root/*": "src",
           "@config/*": "src/config",
           "@api/*": "src/api",
           "@middlewares/*": "src/middlewares",
-          "@utils/*": "src/utils",
+          "@utils/*": "src/utils/",
           "@interfaces/*": "src/interfaces"
         }
       }
