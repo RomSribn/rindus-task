@@ -1,6 +1,7 @@
 import supertest from 'supertest';
-import { app } from '../../../app';
 import { CONDITIONS_PATH } from '@utils/common.utils';
+
+const app = require('@root/app');
 
 describe('ConditionsCtrl', () => {
   const request = supertest(app);

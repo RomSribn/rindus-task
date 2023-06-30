@@ -1,10 +1,11 @@
 import request from 'supertest';
 import httpStatus from 'http-status';
-import { app } from '@root/app';
 import { Response } from 'express';
 import { CitiesCtrl } from './cities.controller';
 import { CITIES_PATH } from '@utils/common.utils';
 import { City } from '@api/cities/models/City.model';
+
+const app = require('@root/app');
 
 describe('CitiesCtrl', () => {
   let mockResponse: Partial<Response>;
